@@ -5,50 +5,53 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace BLOCKCHAIN.Controllers
 {
     public class HomeController1 : Controller
     {
-        [Route("api/[controller]")]
-        public IActionResult Index()
-        {
-            return View();
         
-        }
 
 
-
-        [HttpGet]
-        public async Task<List<User>> Get()
+        [Route("")]
+        [Route("home")]
+        [Route("home/index")]
+        public async Task<IActionResult> Index(List<User> model)
         {
-            using (var client = new HttpClient())
-            {
-                var response = await client.GetAsync("http://localhost:");
-                var data = JsonConvert.DeserializeObject<UserCollection>(response.Content.ReadAsStringAsync().Result);
-                List<User> result = new List<User>();
-
-                return result;
-
-            }
-
-
+            return View(model);
         }
-        [HttpGet("{userKey}")]
-        public async Task<User> Get(string userKey)
-        {
-            using (var client = new HttpClient())
-            {
-                User result = new User();
-                var response = await client.GetAsync("http://localhost:");
-                var data = JsonConvert.DeserializeObject<UserCollection>(response.Content.ReadAsStringAsync().Result);
-                result = data.Users.Where(U => U.userKey == userKey).First();
-
-                return result;
-            }
 
 
-        }
+        
     }
+
+
+    /*
+         public class HomeController1 : Controller
+    {
+        
+
+
+        [Route("")]
+        [Route("home")]
+        [Route("home/index")]
+        public async Task<IActionResult> Index()
+        {
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync(Program.BASE_URL + "User");
+                var model = JsonConvert.DeserializeObject<List<User>>(
+                    response.Content.ReadAsStringAsync().Result);
+                return View(model);
+            }
+        }
+
+
+        
+    }
+     
+     */
 }

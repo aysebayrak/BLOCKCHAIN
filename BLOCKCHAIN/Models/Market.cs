@@ -13,7 +13,6 @@ namespace BLOCKCHAIN.Models
         [Key]
         [ForeignKey("Wallet")]
         public string productName { get; set; }
-        public int productPrice { get; set;
-        }
+        public int productPrice { get; set; }
     }
 }

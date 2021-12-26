@@ -11,6 +11,8 @@ namespace BLOCKCHAIN
 {
     public class Program
     {
+
+        public static string BASE_URL = "http://localhost:3000/";
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Block Chain| Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="~/tema/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/tema/css/single.css" rel='stylesheet' type='text/css' />
+    <link href="~/tema/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="~/tema/css/fontawesome-all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+          rel="stylesheet">
+</head>
+
+<body>
+    <!--Header-->
+    <!--/main-->
+    <section class="main-content-w3layouts-agileits">
+        <div class="container">
+            <h3 class="tittle">Sign In Now</h3>
+            <div class="row inner-sec">
+                <div class="login p-5 bg-light mx-auto mw-100">
+
+                    @using (Html.BeginForm("LoginFun", "Login", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            <label for="exampleInputEmail1 mb-2">User Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="userName" placeholder="" required="">
+                           
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1 mb-2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="userPassword" placeholder="" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary submit mb-4">Sign In</button>
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//main-->
+   
+    <!-- js -->
+    <script src="~/tema/js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!--/ start-smoth-scrolling -->
+    <script src="~/tema/js/move-top.js"></script>
+    <script src="~/tema/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <!--// end-smoth-scrolling -->
+
+    <script>
+        $(document).ready(function () {
+            /*
+                                    var defaults = {
+                                            containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                        };
+                                    */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <a href="#home" class="scroll" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;"> </span>
+    </a>
+
+    <!-- //Custom-JavaScript-File-Links -->
+    <script src="~/tema/js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
+

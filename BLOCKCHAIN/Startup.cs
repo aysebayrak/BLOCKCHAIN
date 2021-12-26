@@ -46,11 +46,27 @@ namespace BLOCKCHAIN
 
             app.UseAuthorization();
 
+            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+               endpoints.MapControllerRoute(
+               name: "home",
+               pattern: "{controller=HomeController1}/{action=Index}");
+
+
+              endpoints.MapControllerRoute(
+              name: "login",
+              pattern: "{controller=LoginController}/{action=Index}");
+
+               endpoints.MapControllerRoute(
+              name: "wallet",
+              pattern: "{controller=WalletController}/{action=Index}");
+
             });
         }
     }

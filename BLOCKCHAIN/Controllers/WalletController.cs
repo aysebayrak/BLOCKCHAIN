@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace BLOCKCHAIN.Controllers
 {
-    public class MarketController : Controller
+    public class WalletController : Controller
     {
+
+        
+        [Route("wallet")]
+        [Route("wallet/index")]
         public IActionResult Index()
         {
-            
-
             return View();
         }
     }

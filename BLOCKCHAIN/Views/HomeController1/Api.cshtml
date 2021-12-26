@@ -1,4 +1,4 @@
-﻿@model List<User>
+﻿@model  List<User>
 
 @{
     Layout = null;
@@ -12,15 +12,12 @@
     <title>Api</title>
     @foreach (var ticket in @Model)
     {
-        <h1>@ticket.userName</h1>
-
-
-
-
-
+        <h1>@ticket.userName</h1>   
+        
+        
     }
 
-</head>
+    </head>
 <body>
 </body>
 </html>
