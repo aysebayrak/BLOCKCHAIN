@@ -97,54 +97,51 @@
     <!--/main-->
     <section class="main-content-w3layouts-agileits">
         <div class="container">
-            <h3 class="tittle">Block</h3>
+            <h3 class="tittle">Blocks</h3>
             <div class="inner-sec">
-                <!--left-->
-                <div class="left-blog-info-w3layouts-agileits text-left">
-                    <div class="row">
-                        @foreach (var b in @Model)
-                        {
-                            <div class="col-lg-4 card">
-                                 
-                               
-                                <div class="card-body">
+               
+                
+                    <div class="row justify-content-center align-items-center">
+                       
+                            @foreach (var b in @Model)
+                            {
 
-                                    <h5 class="card-title">
-                                        <a href="single.html">Ürün İsmi : @b.productName</a>
-                                    </h5>
-                                    <h5 class="card-title">
-                                        <a href="single.html">Ürün Fiyat : @b.productPrice</a>
-                                    </h5>
+                                <div class="card border-dark mb-3 p-2 text-center" >
+                                    <div class="card-header ">
+                                        <h5 class="card-title" style="font-size: 25px;">
+                                            <a href="single.html"> @b.productName</a>
+                                        </h5>
+                                    </div>
+                                    <div class="card-body ">
 
+                                        <h5 class="card-title" style="font-size: 20px;">
+                                            <a href="single.html">Ürün Fiyat : @b.productPrice TL</a>
+                                        </h5>
 
-                                    <h5 class="card-title">
-                                        <a href="single.html">Ürün Fiyat : @b.productPrice</a>
-                                    </h5>
-                                    <h5 class="card-title">
-                                        <a href="single.html">Buyer Key : @b.buyerKey</a>
-                                    </h5>
-                                    <h5 class="card-title">
-                                        <a href="single.html">Seller Key :  @b.sellerKey</a>
-                                    </h5>
-                                    <h5 class="card-title">
-                                        <a href="single.html">BlockKey : @b.blockKey</a>
-                                    </h5>
+                                        <h5 class="card-title" style="font-size: 15px;">
+                                            <a href="single.html">Buyer Key : @b.buyerKey</a>
+                                        </h5>
+                                        <h5 class="card-title" style="font-size: 15px;">
+                                            <a href="single.html">Seller Key :  @b.sellerKey</a>
+                                        </h5>
+                                        <h5 class="card-title" style="font-size: 15px;">
+                                            <a href="single.html">BlockKey : @b.blockKey</a>
+                                        </h5>
 
-                                    <h5 class="card-title">
-                                        <a href="single.html">İşlem Tarihi : @b.transacitionDate</a>
-                                    </h5>
+                                        <h5 class="card-footer" style="font-size: 10px;">
+                                            <a href="single.html">İşlem Tarihi : @b.transacitionDate</a>
+                                        </h5>
 
-
+                                    </div>
                                 </div>
-                            </div>
 
-                        }
+                            }
 
-
+                        
 
                     </div>
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-left mt-4">
+                        <ul class="pagination justify-content-center mt-4">
                             <li class="page-item disabled">
                                 <a class="page-link" href="#" tabindex="-1">Previous</a>
                             </li>
@@ -164,7 +161,7 @@
                     </nav>
                     <!--//left-->
                 </div>
-            </div>
+           
         </div>
     </section>
     <!--//main-->
