@@ -48,24 +48,33 @@ namespace BLOCKCHAIN
 
             
 
-            app.UseEndpoints(endpoints =>
+           app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-
                endpoints.MapControllerRoute(
-               name: "home",
-               pattern: "{controller=HomeController1}/{action=Index}");
-
+               name: "login",
+               pattern: "{controller=LoginController}/{action=Index}");
 
               endpoints.MapControllerRoute(
               name: "login",
               pattern: "{controller=LoginController}/{action=Index}");
 
-               endpoints.MapControllerRoute(
+              endpoints.MapControllerRoute(
               name: "wallet",
               pattern: "{controller=WalletController}/{action=Index}");
+
+              endpoints.MapControllerRoute(
+              name: "satýnal",
+              pattern: "{controller=LoginController}/{action=SatýnAl}");
+
+                endpoints.MapControllerRoute(
+               name: "wallet",
+               pattern: "{controller=WalletController}/{action=Wallet}");
+
+                endpoints.MapControllerRoute(
+                name: "block",
+                 pattern: "{controller=BlockController}/{action=Block}");
+
+
 
             });
         }

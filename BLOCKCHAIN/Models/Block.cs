@@ -17,6 +17,7 @@ namespace BLOCKCHAIN.Models
         public string sellerKey { get; set; }
         public  int productPrice { get; set; }
         public  DateTime transacitionDate { get; set; }
+        public string blockKey { get; set; }
 
     }
 }

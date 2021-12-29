@@ -12,7 +12,7 @@ namespace BLOCKCHAIN
     public class Program
     {
 
-        public static string BASE_URL = "http://localhost:3000/";
+        public static string BASE_URL = "https://nft-application.herokuapp.com/";
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

@@ -16,9 +16,6 @@ namespace BLOCKCHAIN.Controllers
         
 
 
-        [Route("")]
-        [Route("home")]
-        [Route("home/index")]
         public async Task<IActionResult> Index(List<User> model)
         {
             return View(model);

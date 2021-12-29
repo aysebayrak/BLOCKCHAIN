@@ -11,8 +11,8 @@ namespace BLOCKCHAIN.Controllers
 
         
         [Route("wallet")]
-        [Route("wallet/index")]
-        public IActionResult Index()
+      //  [Route("wallet/index")]
+        public ActionResult Index()
         {
             return View();
         }
