@@ -74,6 +74,14 @@ namespace BLOCKCHAIN
                 name: "block",
                  pattern: "{controller=BlockController}/{action=Block}");
 
+               endpoints.MapControllerRoute(
+              name: "portfolio",
+              pattern: "{controller=PortfolioController}/{action=Portfolio}");
+
+                endpoints.MapControllerRoute(
+                 name: "register",
+                 pattern: "{controller=RegisterController}/{action=Register}");
+
 
 
             });
